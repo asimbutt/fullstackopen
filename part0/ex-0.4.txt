@@ -1,0 +1,18 @@
+Browser->Server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note Status:302
+Server-->Browser: Received html content with encoding charset=utf-8
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes Status:200
+Server-->Browser: Received html content with encoding charset=utf-8
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css Status:200
+Server-->Browser: Received css file main.css with charset=utf-8
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js Status:200
+Server-->Browser: Received javascript file main.js with charset=UTF-8
+note over Browser:
+main.js requested data.json file
+end note
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Server-->Browser: Received json file data.json charset=utf-8
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/favicon.ico
+Server-->Browser: Received html content
+note over Browser:
+browser executes native commands for page
+end note
