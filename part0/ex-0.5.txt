@@ -1,0 +1,16 @@
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+Server-->Browser: Received html content
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+Server-->Browser: Received css file main.css
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+Server-->Browser: Received javascript file spa.js
+note over Browser:
+executed spa.js and send
+get request for data.json
+end note
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Server-->Browser: Received json file data.json
+note over Browser:
+executed data.json and
+show all data on page
+end note
